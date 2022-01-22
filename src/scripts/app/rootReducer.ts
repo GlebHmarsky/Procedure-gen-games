@@ -1,10 +1,8 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import profiles from 'features/page-profiles/slice'
-import createProfile from 'features/page-create-profile/slice'
+import profiles from 'features/page-games/slice'
 
 const rootReducer = combineReducers({
   profiles,
-  createProfile,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

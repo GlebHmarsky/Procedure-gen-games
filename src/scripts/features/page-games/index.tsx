@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
 import { Grid } from '@mui/material';
-import Header from './controls/header';
-import ProfilesList from './controls/body';
-import { RootState } from 'src/scripts/app/rootReducer';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'src/scripts/app/rootReducer';
+import ProfilesList from './controls/body';
+import Header from './controls/header';
 import { fetchProfiles } from './slice/thunk';
 
-const Profiles = () => {
+export const Games = () => {
 
   const { apiStatus: profilesApiStatus, data: profiles } = useSelector(
     (state: RootState) => state.profiles
@@ -15,15 +15,15 @@ const Profiles = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    if (profilesApiStatus === 'None'){
+    if (profilesApiStatus === 'None') {
       dispatch(fetchProfiles())
     }
-    if (profilesApiStatus === 'Success' && profiles){
+    if (profilesApiStatus === 'Success' && profiles) {
       console.log(profiles)
     }
   }, [dispatch, profilesApiStatus])
 
-  
+
   return (
     <Grid container flexDirection="column" alignContent="center" bgcolor="common.white">
       <Grid item sm={7} xs={11}>
@@ -35,5 +35,3 @@ const Profiles = () => {
     </Grid>
   );
 };
-
-export default Profiles;

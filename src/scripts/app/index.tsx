@@ -1,5 +1,5 @@
 import React from 'react';
-import Root from '../components/root';
+import Root from '../components/routing';
 
 import { Box, ThemeProvider as MuiThemeProvider } from '@mui/material';
 import { ThemeProvider } from 'styled-components';
