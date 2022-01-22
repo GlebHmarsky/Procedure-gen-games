@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/",
+    "jsx": "react",
+    "paths": {
+      "features/*": ["src/scripts/features/*"],
+      "assets/*": ["src/assets/*"],
+      "themes/*": ["src/scripts/app/styles/themes/*"],
+      "src/*": ["src/*"],
+      "components/*": ["src/scripts/components/*"],
+      "api/*": ["src/api/*"],
+      "style/*": ["src/style/*"],
+      "utils/*": ["src/scripts/utils/*"]
+    },
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "target": "es5",
+    "moduleResolution": "node",
+    "strict": true
+  },
+  "exclude": ["node_modules"]
+}
