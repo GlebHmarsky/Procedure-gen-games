@@ -1,56 +1,56 @@
 @font-face {
   src: local('SF Pro Rounded'),
-    url(../../assets/fonts/SF-Pro-Rounded-Ultralight.otf);
+    url(../assets/fonts/SF-Pro-Rounded-Ultralight.otf);
   font-family: 'SF Pro Rounded';
   font-weight: 100;
 }
 
 @font-face {
-  src: local('SF Pro Rounded'), url(../../assets/fonts/SF-Pro-Rounded-Thin.otf);
+  src: local('SF Pro Rounded'), url(../assets/fonts/SF-Pro-Rounded-Thin.otf);
   font-family: 'SF Pro Rounded';
   font-weight: 200;
 }
 
 @font-face {
-  src: local('SF Pro Rounded'), url(../../assets/fonts/SF-Pro-Rounded-Light.otf);
+  src: local('SF Pro Rounded'), url(../assets/fonts/SF-Pro-Rounded-Light.otf);
   font-family: 'SF Pro Rounded';
   font-weight: 300;
 }
 
 @font-face {
   src: local('SF Pro Rounded'),
-    url(../../assets/fonts/SF-Pro-Rounded-Regular.otf);
+    url(../assets/fonts/SF-Pro-Rounded-Regular.otf);
   font-family: 'SF Pro Rounded';
   font-weight: 400;
 }
 
 @font-face {
   src: local('SF Pro Rounded'),
-    url(../../assets/fonts/SF-Pro-Rounded-Medium.otf);
+    url(../assets/fonts/SF-Pro-Rounded-Medium.otf);
   font-family: 'SF Pro Rounded';
   font-weight: 500;
 }
 
 @font-face {
   src: local('SF Pro Rounded'),
-    url(../../assets/fonts/SF-Pro-Rounded-Medium.otf);
+    url(../assets/fonts/SF-Pro-Rounded-Medium.otf);
   font-family: 'SF Pro Rounded';
   font-weight: 600;
 }
 @font-face {
-  src: local('SF Pro Rounded'), url(../../assets/fonts/SF-Pro-Rounded-Bold.otf);
+  src: local('SF Pro Rounded'), url(../assets/fonts/SF-Pro-Rounded-Bold.otf);
   font-family: 'SF Pro Rounded';
   font-weight: 700;
 }
 
 @font-face {
-  src: local('SF Pro Rounded'), url(../../assets/fonts/SF-Pro-Rounded-Heavy.otf);
+  src: local('SF Pro Rounded'), url(../assets/fonts/SF-Pro-Rounded-Heavy.otf);
   font-family: 'SF Pro Rounded';
   font-weight: 800;
 }
 
 @font-face {
-  src: local('SF Pro Rounded'), url(../../assets/fonts/SF-Pro-Rounded-Black.otf);
+  src: local('SF Pro Rounded'), url(../assets/fonts/SF-Pro-Rounded-Black.otf);
   font-family: 'SF Pro Rounded';
   font-weight: 900;
 }

@@ -88,7 +88,7 @@ export default {
       assets: path.resolve(__dirname, 'src/assets'),
       themes: path.resolve(__dirname, 'src/scripts/app/styles/themes'),
       src: path.resolve(__dirname, 'src'),
-
+      fonts: path.resolve(__dirname, 'src/fonts'),
       components: path.resolve(__dirname, 'src/scripts/components'),
       api: path.resolve(__dirname, 'src/api'),
       style: path.resolve(__dirname, 'src/style'),

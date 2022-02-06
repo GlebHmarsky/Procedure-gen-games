@@ -35,6 +35,7 @@
       "^assets/(.*)$": "<rootDir>/src/assets/$1",
       "^themes/(.*)$": "<rootDir>/src/scripts/app/styles/themes/$1",
       "^src/(.*)$": "<rootDir>/src/$1",
+      "^src/fonts(.*)$": "<rootDir>/src/fonts$1",
       "^style/(.*)$": "<rootDir>/src/style/$1",
       "^utils/(.*)$": "<rootDir>/src/scripts/utils/$1"
     },

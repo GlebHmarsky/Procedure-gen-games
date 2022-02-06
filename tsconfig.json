@@ -8,6 +8,7 @@
       "assets/*": ["src/assets/*"],
       "themes/*": ["src/scripts/app/styles/themes/*"],
       "src/*": ["src/*"],
+      "fonts/*": ["src/fonts*"],
       "components/*": ["src/scripts/components/*"],
       "api/*": ["src/api/*"],
       "style/*": ["src/style/*"],
