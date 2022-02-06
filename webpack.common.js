@@ -82,7 +82,7 @@ export default {
   },
   /* where to search for entrypoints */
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.css'],
     alias: {
       features: path.resolve(__dirname, 'src/scripts/features'),
       assets: path.resolve(__dirname, 'src/assets'),
