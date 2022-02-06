@@ -1,11 +1,11 @@
 declare namespace Components {
-  export interface IProfile {
+  export interface IGames {
     id: number,
     name: string;
     description: string;
     avatarURL: string | null;
   }
-  export interface ICreateProfile {
+  export interface ICreateGame {
     id: number,
     name: string;
     description: string;

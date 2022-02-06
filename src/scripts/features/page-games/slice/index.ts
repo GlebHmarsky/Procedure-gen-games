@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchProfiles } from './thunk';
+import { fetchGames } from './thunk';
 
-const initialState: SlicesDefinitions.IApiSliceState<(Components.IProfile[])> =
+const initialState: SlicesDefinitions.IApiSliceState<(Components.IGames[])> =
   {
     apiStatus: 'None',
     data: [],
@@ -9,20 +9,20 @@ const initialState: SlicesDefinitions.IApiSliceState<(Components.IProfile[])> =
   };
 
 const taskSlice = createSlice({
-  name: 'mocaTask5Info',
+  name: 'games/fetch',
   initialState: initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchProfiles.pending, (state) => ({
+    builder.addCase(fetchGames.pending, (state) => ({
       ...state,
       apiStatus: 'Pending',
     }));
-    builder.addCase(fetchProfiles.fulfilled, (state, action) => ({
+    builder.addCase(fetchGames.fulfilled, (state, action) => ({
       ...state,
       data: action.payload,
       apiStatus: 'Pending',
     }));
-    builder.addCase(fetchProfiles.rejected, (state) => ({
+    builder.addCase(fetchGames.rejected, (state) => ({
       ...state,
       apiStatus: 'Pending',
     }));

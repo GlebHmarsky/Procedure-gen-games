@@ -55,11 +55,11 @@ const doPost = async <T = any>(address: string, data: any) => {
 
 class API {
   public getGames = async () => {
-    const response = await doGet<Components.IProfile[]>('/data');
+    const response = await doGet<Components.IGames[]>('/data');
     return response;
   };
 
-  public addGame = async (object: Components.ICreateProfile) => {
+  public addGame = async (object: Components.ICreateGame) => {
     const response = await doPost('/data', object);
     return response;
   };

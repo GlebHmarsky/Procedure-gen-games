@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from 'src/scripts/app/rootReducer';
 import ProfilesList from './controls/body';
 import Header from './controls/header';
-import { fetchProfiles } from './slice/thunk';
+import { fetchGames } from './slice/thunk';
 
 export const Games = () => {
 
@@ -16,7 +16,7 @@ export const Games = () => {
 
   useEffect(() => {
     if (profilesApiStatus === 'None') {
-      dispatch(fetchProfiles())
+      dispatch(fetchGames())
     }
     if (profilesApiStatus === 'Success' && profiles) {
       console.log(profiles)

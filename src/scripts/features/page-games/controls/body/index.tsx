@@ -2,7 +2,7 @@ import { Card, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { CardTextTypography, ProfileCard } from './styled';
 
-const ProfilesList = ({ profiles }: { profiles: Components.IProfile[] }) => {
+const ProfilesList = ({ profiles }: { profiles: Components.IGames[] }) => {
   return (
     <Grid
       container
