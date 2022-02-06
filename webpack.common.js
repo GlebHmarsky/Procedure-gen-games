@@ -13,19 +13,9 @@ const __dirname = path.dirname(__filename);
 
 export default {
   /* Application entrypoints */
-  entry: {
-    /* Entry point for our code, it will change often */
-    index: ['regenerator-runtime/runtime.js', './src/scripts/index.tsx'],
-    /*
-     * Entry point for the libraries, they are not going to change, so
-     * webpack should pack it into another bundle so that browsers could
-     * cache it and request only our application code later
-     *
-     * there was a loader for bootstrap, now it's move on
-     *
-     */
-    // vendor: './src/scripts/vendor.ts',
-  },
+  /* Entry point for our code, it will change often */
+  entry: ['regenerator-runtime/runtime.js', './src/scripts/index.tsx'],
+
   /* Enable source maps for bundled files */
   devtool: 'inline-source-map',
 

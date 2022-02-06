@@ -5,12 +5,12 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "webpack serve --open --config webpack.dev.js",
+    "start-json-server": "npx json-server --watch data/profiles.json",
+    "build": "webpack --config webpack.prod.js",
     "test": "jest",
     "prettify": "prettier . --write",
     "lint-staged": "lint-staged",
-    "build": "webpack --config webpack.prod.js",
-    "start": "webpack serve --open --config webpack.dev.js",
-    "start-json-server": "npx json-server --watch data/profiles.json",
     "pretify": "npx prettier . --write"
   },
   "keywords": [],
