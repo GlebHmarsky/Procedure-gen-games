@@ -1,11 +1,13 @@
 {
   "data": [
     {
+      "id": 3,
       "name": "Марьякова Котаева Света Котаева Света",
       "description": "ЯГТУ 2 курс",
       "avatarURL": null
     },
     {
+      "id": 2,
       "name": "Светлана Радионовна",
       "description": "ЯРГУ 4 курс",
       "avatarURL": null
