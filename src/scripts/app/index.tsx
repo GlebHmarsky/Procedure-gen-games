@@ -1,7 +1,7 @@
 import React from 'react';
 import Root from '../components/routing';
 
-import { Box, ThemeProvider as MuiThemeProvider } from '@mui/material';
+import { Box, CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material';
 import { ThemeProvider } from 'styled-components';
 import theme from './styles/themes/main';
 import { Provider } from 'react-redux';
@@ -12,6 +12,7 @@ const App = () => {
     <Provider store={appStore}>
       <MuiThemeProvider theme={theme}>
         <ThemeProvider theme={theme}>
+          <CssBaseline/>
           <Box height='100vh' width="100vw" bgcolor='common.white'>
             <Root />
           </Box>
