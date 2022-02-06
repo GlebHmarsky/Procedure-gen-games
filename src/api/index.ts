@@ -28,47 +28,39 @@ function getAxiosOptions(
   return options;
 }
 
-const doGet = <T>(address: string) => {
-  return axiosInstance.get<T>(address);
+const doGet = async <T>(address: string) => {
+  try {
+    const response = (await axiosInstance.get<T>(address)).data as T;
+    return response;
+  } catch (e) {
+    console.log(e);
+    throw e;
+  }
 };
 
-const doPost = (address: string, data: any) => {
+const doPost = async <T = any>(address: string, data: any) => {
   const stringData = JSON.stringify(data);
-  return axiosInstance({
-    method: 'post',
-    url: address,
-    data: stringData,
-  });
+  try {
+    const response = (await axiosInstance({
+      method: 'post',
+      url: address,
+      data: stringData,
+    })).data as T;
+    return response;
+  } catch (e) {
+    console.log(e);
+    throw e;
+  }
 };
 
 class API {
-  private async doGet<T = any>(...args: Parameters<typeof doGet>) {
-    try {
-      const response = (await doGet(...args)).data as T;
-      return response;
-    } catch (e) {
-      console.log(e);
-      throw e;
-    }
-  }
-
-  private async doPost<T = any>(...args: Parameters<typeof doPost>) {
-    try {
-      const response = (await doPost(...args)).data as T;
-      return response;
-    } catch (e) {
-      console.log(e);
-      throw e;
-    }
-  }
-
-  public getProfiles = async () => {
-    const response = await this.doGet<Components.IProfile[]>('/data');
+  public getGames = async () => {
+    const response = await doGet<Components.IProfile[]>('/data');
     return response;
   };
 
-  public createUser = async (object: Components.ICreateProfile) => {
-    const response = await this.doPost('/data', object);
+  public addGame = async (object: Components.ICreateProfile) => {
+    const response = await doPost('/data', object);
     return response;
   };
 }
