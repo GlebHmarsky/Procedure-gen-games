@@ -29,7 +29,7 @@ export const Games = () => {
       <Grid item sm={7} xs={11}>
         <Grid container>
           <Header />
-          <ProfilesList profiles={profiles} />
+          <ProfilesList games={profiles} />
         </Grid>
       </Grid>
     </Grid>

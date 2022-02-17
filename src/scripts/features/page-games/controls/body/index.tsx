@@ -1,8 +1,10 @@
-import { Card, Grid, Typography } from '@mui/material';
+import { Box, Card, Grid, Typography } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { SOME_GAME_PATH } from 'src/scripts/components/routing/routes.config';
 import { CardTextTypography, ProfileCard } from './styled';
 
-const ProfilesList = ({ profiles }: { profiles: Components.IGames[] }) => {
+const ProfilesList = ({ games }: { games: Components.IGames[] }) => {
   return (
     <Grid
       container
@@ -11,7 +13,10 @@ const ProfilesList = ({ profiles }: { profiles: Components.IGames[] }) => {
       justifyContent="center"
       flexWrap="wrap"
     >
-      {profiles.map((profile, i) => {
+      <Box>
+        <Link to={SOME_GAME_PATH} >Some game</Link>
+      </Box>
+      {games.map((game, i) => {
         return (
           <Grid key={i} item xs={12} lg={6}>
             <ProfileCard
@@ -34,7 +39,7 @@ const ProfilesList = ({ profiles }: { profiles: Components.IGames[] }) => {
                     }}
                   >
                     <Typography variant="subtitle1" fontSize="1.8rem">
-                      {profile.name
+                      {game.name
                         .split(' ')
                         .map((v) => {
                           return v[0].toUpperCase();
@@ -50,7 +55,7 @@ const ProfilesList = ({ profiles }: { profiles: Components.IGames[] }) => {
                     variant="h6"
                     lineHeight="1.4"
                   >
-                    {profile.name}
+                    {game.name}
                   </CardTextTypography>
                   <Grid container spacing={1.5}>
                     <Grid item>
@@ -59,7 +64,7 @@ const ProfilesList = ({ profiles }: { profiles: Components.IGames[] }) => {
                         fontSize="0.85rem"
                         color="text.secondary"
                       >
-                        {profile.description}
+                        {game.description}
                       </Typography>
                     </Grid>
                     {/* <Grid item>
