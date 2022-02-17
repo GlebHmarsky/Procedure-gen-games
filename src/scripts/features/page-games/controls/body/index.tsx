@@ -16,6 +16,8 @@ const ProfilesList = ({ games }: { games: Components.IGames[] }) => {
       <Box>
         <Link to={SOME_GAME_PATH} >Some game</Link>
       </Box>
+
+      
       {games.map((game, i) => {
         return (
           <Grid key={i} item xs={12} lg={6}>
