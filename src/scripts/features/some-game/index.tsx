@@ -1,6 +1,6 @@
 import { Button, Grid } from '@mui/material';
 import { Box } from '@mui/system';
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from 'src/scripts/app/rootReducer';
 import { addPlayData, switchTurn } from './slice';
@@ -81,7 +81,5 @@ export const SomeGame = () => {
     </Grid>
   );
 };
-function RootState(state: any, RootState: any): {} {
-  throw new Error('Function not implemented.');
-}
+
 
