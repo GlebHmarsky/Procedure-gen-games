@@ -13,7 +13,7 @@ const initialState: TState =
   rowCount: 3,
   columnCount: 3,
 
-  playData: Array<Array<number>>(3).map(() => Array(3).fill(0)),
+  playData: Array<Array<number>>(3).fill(Array(3).fill(0))/* .map(() => Array(3).fill(0)) */,
   turnFirstPlayer: true
 };
 
@@ -27,9 +27,8 @@ const taskSlice = createSlice({
 
     addPlayData: (state, action: PayloadAction<{ i: number, j: number }>) => {
       const { i, j } = action.payload
-      if (state.playData[i][j] === 0) {
-        state.playData[i][j] = state.turnFirstPlayer ? 1 : 2
-      }
+      state.playData[i][j] = state.turnFirstPlayer ? 1 : 2
+
     }
   },
 
